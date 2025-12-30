@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>File Complaint</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Register Complaint</title>
+  <link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
 
-<header>
-    <h1>Register Fuel Complaint</h1>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="complaint.html" class="active">Complaint</a>
+    <a href="track.html">Track</a>
+    <a href="safety.html">Safety</a>
+    <span id="auth-area"><a href="login.html" class="btn">Login</a></span>
+  </nav>
 </header>
 
-<section class="hero">
-    <form class="form-box">
-        <input type="text" placeholder="Full Name" required><br><br>
-        <input type="text" placeholder="Fuel Station Name" required><br><br>
-        <input type="text" placeholder="Location" required><br><br>
-
-        <select required>
-            <option value="">Select Complaint Type</option>
-            <option>Fuel Quality</option>
-            <option>Fuel Quantity</option>
-            <option>Staff Misbehavior</option>
-            <option>Safety Issue</option>
-        </select><br><br>
-
-        <textarea placeholder="Describe your complaint" rows="5" required></textarea><br><br>
-
-        <button class="btn">Submit Complaint</button>
-    </form>
+<!-- HERO -->
+<section class="page-hero">
+  <h1>Register Fuel Complaint</h1>
+  <p>Transparent grievance redressal system</p>
 </section>
+
+<!-- FORM -->
+<section class="glass-section">
+  <form class="glass-form">
+    <input placeholder="Full Name" required>
+    <input placeholder="Email" required>
+    <input placeholder="Fuel Station Location" required>
+    <textarea placeholder="Describe your complaint" required></textarea>
+    <button class="btn primary">Submit Complaint</button>
+  </form>
+</section>
+
+<script src="js/auth.js"></script>
+<script src="js/routeGuard.js"></script>
 
 </body>
 </html>

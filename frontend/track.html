@@ -1,22 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Track Complaint</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Track Complaint</title>
+  <link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
 
-<header>
-    <h1>Track Complaint Status</h1>
+<header class="navbar">
+  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="complaint.html">Complaint</a>
+    <a href="track.html" class="active">Track</a>
+    <a href="safety.html">Safety</a>
+    <span id="auth-area"><a href="login.html" class="btn">Login</a></span>
+  </nav>
 </header>
 
-<section class="hero">
-    <input type="text" placeholder="Enter Complaint ID"><br><br>
-    <button class="btn">Track</button>
-
-    <p style="margin-top:20px;">Status: Pending</p>
+<section class="page-hero">
+  <h1>Track Your Complaint</h1>
+  <p>Check live status of your complaint</p>
 </section>
+
+<section class="glass-section">
+  <div class="glass-form">
+    <input placeholder="Enter Complaint ID">
+    <button class="btn primary">Track</button>
+    <p class="status success">Status: Under Review</p>
+  </div>
+</section>
+
+<script src="js/auth.js"></script>
+<script src="js/routeGuard.js"></script>
 
 </body>
 </html>

@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Safety Guidelines</title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Safety Guidelines</title>
+  <link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
 
-<header>
-    <h1>Fuel Station Safety Guidelines</h1>
+<header class="navbar">
+  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="complaint.html">Complaint</a>
+    <a href="track.html">Track</a>
+    <a href="safety.html" class="active">Safety</a>
+    <span id="auth-area"><a href="login.html" class="btn">Login</a></span>
+  </nav>
 </header>
 
-<section class="hero">
-    <ul style="text-align:left; max-width:600px; margin:auto;">
-        <li>No smoking near fuel pumps</li>
-        <li>Switch off engine while refueling</li>
-        <li>Do not use mobile phones</li>
-        <li>Report fuel spillage immediately</li>
-        <li>Follow instructions of fuel station staff</li>
-    </ul>
+<section class="page-hero">
+  <h1>Fuel Station Safety Guidelines</h1>
+  <p>Your safety is our responsibility</p>
 </section>
 
+<section class="glass-section cards">
+  <div class="glass-card">🚫 No Mobile Phones near pumps</div>
+  <div class="glass-card">🔥 Turn off vehicle engine</div>
+  <div class="glass-card">🚬 Smoking strictly prohibited</div>
+  <div class="glass-card">🧯 Follow emergency instructions</div>
+</section>
+
+<script src="js/auth.js"></script>
 </body>
 </html>

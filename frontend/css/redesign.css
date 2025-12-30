@@ -1,0 +1,1103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background: #f7f9fb;
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background: white;
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.logo .indian {
+  color: #0b2b40;
+}
+
+.logo .oil {
+  color: #f36f21;
+}
+
+nav a {
+  margin-left: 22px;
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.primary {
+  background: #f36f21;
+  color: white;
+}
+
+.secondary {
+  border: 2px solid #f36f21;
+  color: #f36f21;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  min-height: 75vh;          /* reduced from very large */
+  background-image: url("https://images.pexels.com/photos/2391/dirty-industry-stack-factory.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;   /* keeps ratio */
+}
+/* ============================= */
+/* HERO SLIDER */
+/* ============================= */
+
+.hero {
+  position: relative;
+  height: 75vh;
+  overflow: hidden;
+}
+
+.hero-slides, .slide {
+  position: absolute;
+  inset: 0;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 43, 64, 0.7);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 100px 50px;
+  max-width: 700px;
+}
+
+/* arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.7);
+  border: none;
+  font-size: 32px;
+  padding: 5px 12px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.arrow.left { left: 20px; }
+.arrow.right { right: 20px; }
+
+
+}
+
+}
+
+.hero h1 {
+  font-size: 48px;
+  max-width: 700px;
+}
+
+.hero h1 span {
+  color: #f36f21;
+}
+
+.hero p {
+  margin: 20px 0;
+  max-width: 600px;
+}
+
+.hero-buttons a {
+  margin-right: 15px;
+}
+
+/* PRICE BAR */
+.price-bar {
+  background: white;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price-box {
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.green {
+  background: #2ecc71;
+  color: white;
+}
+
+.up {
+  color: green;
+}
+
+.down {
+  color: red;
+}
+
+/* SECTION */
+.section {
+  padding: 80px 50px;
+}
+
+.light {
+  background: white;
+}
+
+.center {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.video-box {
+  background: #0b2b40;
+  border-radius: 20px;
+  position: relative;
+}
+
+.play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f36f21;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CARDS */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px,1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #f7f9fb;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.card h3 {
+  color: #f36f21;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #0b2b40;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+/* ============================= */
+/* NAVBAR LINK & BUTTON STYLING */
+/* ============================= */
+
+.navbar nav a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 22px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for normal links */
+.navbar nav a:hover {
+  background: rgba(243, 111, 33, 0.1);
+  color: #f36f21;
+}
+
+/* LOGIN BUTTON (ORANGE) */
+.navbar nav a.btn {
+  background: #f36f21;
+  color: #fff !important;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+/* LOGIN BUTTON HOVER */
+.navbar nav a.btn:hover {
+  background: #d85f1c;
+  color: #fff;
+}
+/* ============================= */
+/* WHO WE ARE – CLICK FIX */
+/* ============================= */
+
+.who-we-are {
+  position: relative;
+}
+
+/* overlay (if any) */
+.who-overlay {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  z-index: 1;
+  pointer-events: none; /* 🔥 CRITICAL */
+}
+
+/* actual content */
+.who-content {
+  position: relative;
+  z-index: 2; /* ABOVE overlay */
+}
+
+/* video box safe clicks */
+.video-box {
+  position: relative;
+  z-index: 2;
+}
+/* ============================= */
+/* SCROLL ANIMATIONS */
+/* ============================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-content {
+    padding: 80px 20px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+/* ============================= */
+/* BEAUTIFUL PRICE BAR */
+/* ============================= */
+
+.price-bar {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 35px 20px;
+  background: linear-gradient(to right, #ffffff, #f7f9fb);
+}
+
+.price-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlighted card */
+.price-card.highlight {
+  background: linear-gradient(135deg, #f36f21, #ff9a3c);
+  color: white;
+}
+
+.price-card.highlight h3,
+.price-card.highlight p {
+  color: white;
+}
+
+/* Typography */
+.fuel-type {
+  font-size: 14px;
+  color: #777;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.price-card.highlight .fuel-type {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.price-card h3 {
+  font-size: 34px;
+  margin: 8px 0;
+}
+
+.price-card h4 {
+  font-size: 28px;
+  margin: 10px 0;
+}
+
+.unit {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Trends */
+.trend {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trend.up {
+  background: rgba(46, 204, 113, 0.15);
+  color: #2ecc71;
+}
+
+.trend.down {
+  background: rgba(231, 76, 60, 0.15);
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+/* ============================= */
+/* ADVANCED PRICE BAR */
+/* ============================= */
+
+.price-bar {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* City selector */
+.city-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.city-select label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.city-select select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* Price cards */
+.price-card {
+  background: white;
+  border-radius: 18px;
+  padding: 25px 30px;
+  min-width: 200px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-6px);
+}
+
+/* Highlight card */
+.price-card.highlight {
+  background: linear-gradient(135deg, #f36f21, #ff9a3c);
+  color: white;
+}
+
+/* Icons */
+.icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+/* Typography */
+.fuel-type {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.price-card h3 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.price-card h4 {
+  font-size: 30px;
+  margin: 10px 0;
+}
+
+/* Trends */
+.trend {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.trend.up {
+  background: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+}
+
+.trend.down {
+  background: rgba(231, 76, 60, 0.2);
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-bar {
+    flex-direction: column;
+  }
+}
+/* ============================= */
+/* FUEL PRICE SECTION HEADING */
+/* ============================= */
+
+.fuel-price-section {
+  padding: 60px 20px;
+  background: linear-gradient(to bottom, #ffffff, #f7f9fb);
+  text-align: center;
+}
+
+.price-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #0b2b40;
+}
+
+.price-title span {
+  color: #f36f21;
+}
+
+/* Mobile responsive heading */
+@media (max-width: 768px) {
+  .price-title {
+    font-size: 28px;
+  }
+}
+/* ============================= */
+/* FUEL PRICE BG IMAGE + GLASS */
+/* ============================= */
+
+.fuel-price-section.with-bg {
+  position: relative;
+  padding: 80px 20px;
+  background-image: url("../assets/iocl-price-bg.jpg"); /* put image here */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 24, 38, 0.75);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep content above overlay */
+.fuel-price-section * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Title */
+.price-title {
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.price-title span {
+  color: #f36f21;
+}
+
+/* GLASS PRICE BAR */
+.price-bar.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  border-radius: 22px;
+  padding: 35px 30px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* GLASS CARDS */
+.price-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 25px 30px;
+  min-width: 200px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Highlight Petrol */
+.price-card.highlight {
+  background: linear-gradient(
+    135deg,
+    rgba(243, 111, 33, 0.85),
+    rgba(255, 154, 60, 0.85)
+  );
+}
+
+/* City select glass */
+.city-select label {
+  color: white;
+}
+
+.city-select select {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: none;
+}
+
+/* Trend colors */
+.trend.up {
+  background: rgba(46, 204, 113, 0.25);
+  color: #2ecc71;
+}
+
+.trend.down {
+  background: rgba(231, 76, 60, 0.25);
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-bar {
+    flex-direction: column;
+  }
+}
+/* ============================= */
+/* FUEL PRICE SECTION – FIXED */
+/* ============================= */
+
+.fuel-price-section.with-bg {
+  position: relative;
+  padding: 90px 20px;
+  background-image: url("https://images.pexels.com/photos/28506512/pexels-photo-28506512.jpeg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 20, 30, 0.75);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Keep content above overlay */
+.fuel-price-section > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading FIX */
+.price-title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 45px;
+  color: #ffffff;              /* FIXED */
+}
+
+.price-title span {
+  color: #f36f21;
+}
+
+/* Price bar glass container */
+.price-bar.glass {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 35px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(18px);
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+/* City selector */
+.city-select {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: black;
+}
+
+.city-select select {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.25);
+  color: black;
+  backdrop-filter: blur(10px);
+}
+
+/* Glass cards */
+.price-card {
+  min-width: 220px;
+  padding: 28px 30px;
+  border-radius: 22px;
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.35s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Petrol highlight */
+.price-card.highlight {
+  background: linear-gradient(
+    135deg,
+    rgba(243, 111, 33, 0.95),
+    rgba(255, 154, 60, 0.95)
+  );
+}
+
+/* Icons */
+.icon {
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+/* Text */
+.fuel-type {
+  font-size: 15px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.price-card h3 {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.price-card h4 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+/* Trends */
+.trend {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.trend.up {
+  background: rgba(46, 204, 113, 0.25);
+  color: #2ecc71;
+}
+
+.trend.down {
+  background: rgba(231, 76, 60, 0.25);
+  color: #e74c3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .price-bar.glass {
+    flex-direction: column;
+  }
+
+  .price-title {
+    font-size: 28px;
+  }
+}
+/* ============================= */
+/* WHO WE ARE – BEAUTIFUL & CLICKABLE */
+/* ============================= */
+
+.who-we-are {
+  position: relative;
+  padding: 90px 20px;
+  background: url("https://images.pexels.com/photos/10396411/pexels-photo-10396411.jpeg")
+    center/cover no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay */
+.who-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(6, 20, 30, 0.7);
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Container */
+.who-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+/* Content card */
+.who-content {
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(16px);
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+}
+
+.who-content h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.who-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+/* Video card */
+.who-video {
+  position: relative;
+  height: 280px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.who-video:hover {
+  transform: scale(1.05);
+}
+
+/* Play button */
+.play-btn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #f36f21;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* ============================= */
+/* VIDEO MODAL */
+/* ============================= */
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.video-box {
+  position: relative;
+  width: 80%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .who-container {
+    grid-template-columns: 1fr;
+  }
+}
+.page-hero {
+  padding: 120px 20px 60px;
+  background: linear-gradient(135deg, #0b2b40, #123d5a);
+  color: white;
+  text-align: center;
+}
+
+.glass-section {
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.glass-form {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(16px);
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.glass-form input,
+.glass-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.glass-card {
+  background: rgba(255,255,255,0.18);
+  backdrop-filter: blur(14px);
+  padding: 30px;
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+}
+/* ---------- TEXT VISIBILITY FIX ---------- */
+
+/* Default text color */
+body {
+  color: #1a1a1a;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5 {
+  color: #0b2b40;
+}
+
+/* Glass sections text */
+.glass-form,
+.glass-form label,
+.glass-form p {
+  color: #1a1a1a;
+}
+
+/* Input text visibility */
+.glass-form input,
+.glass-form textarea,
+.glass-form select {
+  color: #1a1a1a;
+  background: rgba(255,255,255,0.85);
+}
+
+/* Placeholder fix */
+.glass-form input::placeholder,
+.glass-form textarea::placeholder {
+  color: #666;
+}
+
+/* Buttons always visible */
+.btn {
+  color: #fff;
+}
+
+/* Page hero text stays white */
+.page-hero,
+.page-hero h1,
+.page-hero p {
+  color: #ffffff;
+}
+
+/* Safety cards text */
+.glass-card {
+  color: #ffffff;
+}
+
+/* Track status text */
+.status {
+  color: #0b2b40;
+}
+
+/* Admin dashboard numbers */
+.glass-card strong {
+  color: #ff7a18;
+}
+/* ================= SAFETY PAGE FIX ================= */
+
+/* Safety section background */
+.glass-section.cards {
+  background: #f4f7fb;
+}
+
+/* Safety cards */
+.glass-card {
+  background: rgba(11, 43, 64, 0.85);   /* dark IOCL blue */
+  color: #ffffff;
+  font-weight: 500;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 50px rgba(0,0,0,0.25);
+}
+
+/* Safety icons */
+.glass-card span,
+.glass-card i {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 12px;
+}

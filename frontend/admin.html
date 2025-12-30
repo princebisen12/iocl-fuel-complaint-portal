@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/redesign.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="admin.html" class="active">Dashboard</a>
+    <a href="#" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <h1>Admin Dashboard</h1>
+  <p>Manage user complaints efficiently</p>
+</section>
+
+<section class="glass-section cards">
+  <div class="glass-card">📩 Total Complaints: 120</div>
+  <div class="glass-card">⏳ Pending: 35</div>
+  <div class="glass-card">✅ Resolved: 85</div>
+</section>
+
+<script src="js/auth.js"></script>
+<script src="js/routeGuard.js"></script>
+
+</body>
+</html>

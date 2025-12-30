@@ -1,31 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>IOCL Fuel Complaint Portal</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <title>IndianOil | Complaint Portal</title>
+  <link rel="stylesheet" href="css/redesign.css">
 </head>
 <body>
 
-    <header>
-        <h1>IOCL Fuel Complaint & Safety Portal</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="complaint.html">File Complaint</a>
-            <a href="track.html">Track Complaint</a>
-            <a href="safety.html">Safety Guidelines</a>
-        </nav>
-    </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">
+    <span class="indian">Indian</span><span class="oil">Oil</span>
+  </div>
 
-    <section class="hero">
-        <h2>Report Fuel Issues Easily</h2>
-        <p>Register complaints related to fuel quality, quantity, or service issues.</p>
-        <a class="btn" href="complaint.html">Register Complaint</a>
-    </section>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./complaint.html">Complaint</a>
+    <a href="./track.html">Track</a>
+    <a href="./safety.html">Safety</a>
+    <span id="auth-area"></span>
+    <!-- <a href="./login.html" class="btn">Login</a> -->
+    </span>
+  </nav>
+</header>
 
-    <footer>
-        <p>© 2025 Indian Oil Corporation Ltd</p>
-    </footer>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-slides">
+    <div class="slide active" style="background-image:url('https://images.pexels.com/photos/30556821/pexels-photo-30556821.jpeg')"></div>
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/27647540/pexels-photo-27647540.jpeg')"></div>
+    <div class="slide" style="background-image:url('https://images.pexels.com/photos/2391/dirty-industry-stack-factory.jpg')"></div>
+  </div>
+
+  <div class="hero-content">
+    <h1>YOUR FUEL COMPLAINT <span>RESOLUTION</span> IS OPEN NOW.</h1>
+    <p>Transparent grievance redressal by IndianOil.</p>
+
+    <div class="hero-buttons">
+      <a href="./complaint.html" class="btn primary">Register Complaint</a>
+      <a href="./track.html" class="btn secondary">Track Complaint</a>
+    </div>
+  </div>
+
+  <button class="arrow left" onclick="prevSlide()">‹</button>
+  <button class="arrow right" onclick="nextSlide()">›</button>
+</section>
+
+
+<!-- FUEL PRICE SECTION -->
+<section class="fuel-price-section with-bg">
+  <div class="bg-overlay"></div>
+
+  <h2 class="price-title">
+    Fuel Prices <span>Across India</span>
+  </h2>
+
+  <div class="price-bar glass">
+
+    <div class="city-select">
+      <label>Select City</label>
+      <select id="city" onchange="updatePrices()">
+        <option value="delhi">Delhi</option>
+        <option value="mumbai">Mumbai</option>
+        <option value="kolkata">Kolkata</option>
+      </select>
+    </div>
+
+    <div class="price-card highlight">
+      <div class="icon">⛽</div>
+      <span class="fuel-type">Petrol</span>
+      <h3 id="petrolPrice">₹103.44</h3>
+      <span class="trend up">▲ +0.10</span>
+    </div>
+
+    <div class="price-card">
+      <div class="icon">🛢️</div>
+      <span class="fuel-type">Diesel</span>
+      <h4 id="dieselPrice">₹93.33</h4>
+      <span class="trend down">▼ -0.30</span>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- WHO WE ARE SECTION -->
+<section class="who-we-are">
+
+  <!-- Background overlay -->
+  <div class="who-overlay"></div>
+
+  <div class="who-container">
+
+    <!-- LEFT CONTENT -->
+    <div class="who-content">
+      <h2>Who We Are</h2>
+      <p>
+        Indian Oil Corporation Limited (IndianOil) is India’s largest
+        commercial enterprise, committed to delivering energy solutions
+        with transparency, safety, and innovation.
+      </p>
+
+      <a href="./about.html" class="btn primary">Know More</a>
+    </div>
+
+    <!-- RIGHT VIDEO -->
+    <div class="who-video" onclick="openVideo()">
+      <div class="play-btn">▶</div>
+      <span>Watch Our Story</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+  <div class="video-box">
+    <span class="close" onclick="closeVideo()">×</span>
+    <iframe
+      src="https://youtu.be/I0M0JaLd5kY?si=GwJp9teuIwoflVzE"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+
+
+<!-- WHAT WE OFFER -->
+<section class="section light">
+  <h2 class="center">WHAT WE OFFER?</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Fuel Complaints</h3>
+      <p>Fuel quality, quantity & overcharging issues.</p>
+    </div>
+
+    <div class="card">
+      <h3>Safety Issues</h3>
+      <p>Fire hazards, unsafe practices at fuel stations.</p>
+    </div>
+
+    <div class="card">
+      <h3>Service Quality</h3>
+      <p>Staff behavior and service-related complaints.</p>
+    </div>
+
+    <div class="card">
+      <h3>Admin Resolution</h3>
+      <p>Fast tracking by authorized IOCL officials.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Indian Oil Corporation Ltd.</p>
+</footer>
+<script src="./js/scroll.js"></script>
+<script src="js/slider.js"></script>
+<script src="./js/prices.js"></script>
+<script src="./js/video.js"></script>
+<script src="./js/auth.js"></script>
 
 </body>
 </html>
