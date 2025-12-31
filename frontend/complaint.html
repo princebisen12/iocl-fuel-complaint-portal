@@ -8,13 +8,15 @@
 
 <!-- NAVBAR -->
 <header class="navbar">
-  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <div class="logo">
+    <span class="indian">Indian</span><span class="oil">Oil</span>
+  </div>
   <nav>
     <a href="index.html">Home</a>
     <a href="complaint.html" class="active">Complaint</a>
     <a href="track.html">Track</a>
     <a href="safety.html">Safety</a>
-    <span id="auth-area"><a href="login.html" class="btn">Login</a></span>
+    <span id="auth-area"></span>
   </nav>
 </header>
 
@@ -26,15 +28,34 @@
 
 <!-- FORM -->
 <section class="glass-section">
-  <form class="glass-form">
-    <input placeholder="Full Name" required>
-    <input placeholder="Email" required>
-    <input placeholder="Fuel Station Location" required>
-    <textarea placeholder="Describe your complaint" required></textarea>
-    <button class="btn primary">Submit Complaint</button>
+  <!-- 🔴 FIX 1: onsubmit added -->
+  <form id="complaintForm" class="glass-form" onsubmit="registerComplaint(event)">
+    
+    <!-- 🔴 FIX 2: ids added -->
+    <input id="name" placeholder="Full Name" required>
+    <input id="mobile" placeholder="Mobile Number" required>
+    <input id="email" placeholder="Email" required>
+    <input id="location" placeholder="Fuel Station Location" required>
+
+    <select id="type" required>
+      <option value="">Select Complaint Type</option>
+      <option>Fuel Quality</option>
+      <option>Overcharging</option>
+      <option>Staff Misbehavior</option>
+    </select>
+
+    <textarea id="description" placeholder="Describe your complaint" required></textarea>
+
+    <button type="submit" class="btn primary">Submit Complaint</button>
   </form>
+<div id="result"></div>
+
+  <!-- 🔴 FIX 3: message area -->
+  <p id="msg"></p>
 </section>
 
+<!-- 🔴 FIX 4: complaint.js linked -->
+<script src="js/complaint.js"></script>
 <script src="js/auth.js"></script>
 <script src="js/routeGuard.js"></script>
 

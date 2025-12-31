@@ -7,7 +7,9 @@
 <body>
 
 <header class="navbar">
-  <div class="logo"><span class="indian">Indian</span><span class="oil">Oil</span></div>
+  <div class="logo">
+    <span class="indian">Indian</span><span class="oil">Oil</span>
+  </div>
   <nav>
     <a href="index.html">Home</a>
     <a href="complaint.html">Complaint</a>
@@ -23,13 +25,21 @@
 </section>
 
 <section class="glass-section">
-  <div class="glass-form">
-    <input placeholder="Enter Complaint ID">
-    <button class="btn primary">Track</button>
-    <p class="status success">Status: Under Review</p>
-  </div>
+  <!-- 🔴 FORM ADDED -->
+  <form id="trackForm" class="glass-form">
+    <input
+      id="complaintId"
+      placeholder="Enter Complaint ID (e.g. IOCL123456)"
+      required
+    >
+    <button type="submit" class="btn primary">Track</button>
+  </form>
+
+  <!-- 🔴 RESULT AREA -->
+  <div id="trackResult"></div>
 </section>
 
+<script src="js/track.js"></script>
 <script src="js/auth.js"></script>
 <script src="js/routeGuard.js"></script>
 

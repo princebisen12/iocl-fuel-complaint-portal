@@ -1,40 +1,54 @@
-document.getElementById("trackBtn").addEventListener("click", trackComplaint);
+console.log("track.js loaded");
 
-async function trackComplaint() {
-  const complaintId = document.getElementById("complaintId").value.trim();
-  const statusEl = document.getElementById("status");
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("trackForm");
+  const result = document.getElementById("trackResult");
 
-  if (!complaintId) {
-    statusEl.style.color = "red";
-    statusEl.innerText = "Please enter Complaint ID";
+  if (!form || !result) {
+    console.error("Track form or result element missing");
     return;
   }
 
-  try {
-    const response = await fetch(
-      `http://localhost:5000/api/complaints/track/${complaintId}`
-    );
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    const data = await response.json();
+    const id = document.getElementById("complaintId").value.trim();
 
-    console.log("Tracker response:", data); // 👈 DEBUG
-
-    if (data.message) {
-      statusEl.style.color = "red";
-      statusEl.innerText = data.message;
-    } else {
-      statusEl.style.color = "green";
-      statusEl.innerHTML = `
-        <strong>Complaint Details</strong><br><br>
-        <b>Complaint ID:</b> ${data.complaintId}<br>
-        <b>Status:</b> ${data.status}<br>
-        <b>Type:</b> ${data.type}<br>
-        <b>Location:</b> ${data.location}<br>
-        <b>Email:</b> ${data.email}
-      `;
+    if (!id) {
+      result.innerHTML =
+        "<span class='status error'>Please enter Complaint ID</span>";
+      return;
     }
-  } catch (err) {
-    statusEl.style.color = "red";
-    statusEl.innerText = "Error connecting to server";
-  }
-}
+
+    try {
+      const res = await fetch(
+        `http://localhost:5000/api/complaints/track/${id}`
+      );
+
+      const data = await res.json();
+
+      if (data.message) {
+        result.innerHTML =
+          `<p class="status error">${data.message}</p>`;
+        return;
+      }
+
+      // ✅ SHOW REAL STATUS
+      result.innerHTML = `
+        <div class="glass-card">
+          <p><b>Complaint ID:</b> ${data.complaintId}</p>
+          <p><b>Name:</b> ${data.name}</p>
+          <p><b>Location:</b> ${data.location}</p>
+          <p><b>Type:</b> ${data.type}</p>
+          <p class="status success">
+            Status: ${data.status || "Under Review"}
+          </p>
+        </div>
+      `;
+    } catch (err) {
+      console.error(err);
+      result.innerHTML =
+        "<p class='status error'>Server not reachable</p>";
+    }
+  });
+});
